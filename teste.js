@@ -52,7 +52,8 @@ const translations = {
     "menu.siga": "Me siga nas redes e acompanhe meu trabalho e estudos em cibersegurança.",
     "menu.2025": "2025 Leonardo Costa. Todos os direitos reservados.",
     "menu.tro": "Trojan Modular para Estudos de Red Team",
-    "menu.horse": "Trojan modular com shell reverso, persistência via registro do Windows e payload criptografado com AES. Criado para simular técnicas ofensivas em ambientes controlados, com foco em evasão e execução furtiva."
+    "menu.horse": "Trojan modular com shell reverso, persistência via registro do Windows e payload criptografado com AES. Criado para simular técnicas ofensivas em ambientes controlados, com foco em evasão e execução furtiva.",
+    "menu.furuto": "Futuros Projetos"
   },
   en: {
     "menu.home": "Home",
@@ -107,7 +108,8 @@ const translations = {
     "menu.siga": "Follow me on social media and keep up with my work and studies in cybersecurity.",
     "menu.2025": "2025 Leonardo Costa. All rights reserved.",
     "menu.tro": "Modular Trojan for Red Team Studies",
-    "menu.horse": "Modular Trojan with reverse shell, Windows registry persistence and AES-encrypted payload. Designed to simulate offensive techniques in controlled environments, with a focus on evasion and stealth execution."
+    "menu.horse": "Modular Trojan with reverse shell, Windows registry persistence and AES-encrypted payload. Designed to simulate offensive techniques in controlled environments, with a focus on evasion and stealth execution.",
+    "menu.futuro": "Future projects"
   }
 };
 
