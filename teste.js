@@ -35,7 +35,7 @@ const translations = {
     "menu.mp": "Meus Projetos",
     "menu.mass": "Ferramenta de verificação massiva de Vulnerabilidades",
     "menu.road": "Um roteiro estruturado e brutal que espelha como hackers russos de elite desenvolvem suas habilidades. Foca na construção sólida desde a base matemática até o domínio avançado em ofensiva, engenharia reversa, operações clandestinas e guerra cibernética.",
-    "menu.pro": "Futuros Projetos",
+    "menu.pro": "Trojan Basic",
     "menu.bru": "Brute force de login com tratamento de resposta - Ferramenta completa de Recon - C2 com shell reversa criptografada - Exploit local com shell injectado - Loader com evasão AV/EDR em C puro",
     "menu.entre": "Entre em Contato",
     "menu.na": "Nome",
@@ -51,14 +51,15 @@ const translations = {
     "menu.redes": "Minhas Redes Socias",
     "menu.siga": "Me siga nas redes e acompanhe meu trabalho e estudos em cibersegurança.",
     "menu.2025": "2025 Leonardo Costa. Todos os direitos reservados.",
-    "menu.breve": "Em breve...",
+    "menu.tro": "Trojan Modular para Estudos de Red Team",
+    "menu.horse": "Trojan modular com shell reverso, persistência via registro do Windows e payload criptografado com AES. Criado para simular técnicas ofensivas em ambientes controlados, com foco em evasão e execução furtiva."
   },
   en: {
     "menu.home": "Home",
     "menu.about": "About",
     "menu.skills": "Skills",
     "menu.experience": "Experience",
-    "menu.projects": "Projects",  
+    "menu.projects": "Trojan Basic",  
     "menu.contact": "Contact",
     "menu.descri": "Red Teamer in training, simulating real attacks to discover flaws, anticipate threats and strengthen defenses with advanced intelligence.",
     "menu.Contact-me": "Contact-me",
@@ -105,7 +106,8 @@ const translations = {
     "menu.redes": "My social networks",
     "menu.siga": "Follow me on social media and keep up with my work and studies in cybersecurity.",
     "menu.2025": "2025 Leonardo Costa. All rights reserved.",
-    "menu.breve": "shortly...",
+    "menu.tro": "Modular Trojan for Red Team Studies",
+    "menu.horse": "Modular Trojan with reverse shell, Windows registry persistence and AES-encrypted payload. Designed to simulate offensive techniques in controlled environments, with a focus on evasion and stealth execution."
   }
 };
 
