@@ -53,7 +53,7 @@ const translations = {
     "menu.2025": "2025 Leonardo Costa. Todos os direitos reservados.",
     "menu.tro": "Trojan Modular",
     "menu.horse": "Trojan modular com shell reverso, persistência via registro do Windows e payload criptografado com AES. Criado para simular técnicas ofensivas em ambientes controlados, com foco em evasão e execução furtiva.",
-    "menu.furuto": "Futuros Projetos",
+    "menu.futuro": "Futuros Projetos",
     "menu.certi": "Certificações",
     "menu.cer": "Certificações",
     "menu.v": "Ver Certificado",
