@@ -53,14 +53,19 @@ const translations = {
     "menu.2025": "2025 Leonardo Costa. Todos os direitos reservados.",
     "menu.tro": "Trojan Modular",
     "menu.horse": "Trojan modular com shell reverso, persistência via registro do Windows e payload criptografado com AES. Criado para simular técnicas ofensivas em ambientes controlados, com foco em evasão e execução furtiva.",
-    "menu.furuto": "Futuros Projetos"
+    "menu.furuto": "Futuros Projetos",
+    "menu.certi": "Certificações",
+    "menu.cer": "Certificações",
+    "menu.v": "Ver Certificado",
+    "menu.analista": "IBSEC - Analista da Cibersegurança",
+    "menu.gover": "(Governança)",
   },
   en: {
     "menu.home": "Home",
     "menu.about": "About",
     "menu.skills": "Skills",
     "menu.experience": "Experience",
-    "menu.projects": "Trojan Basic",  
+    "menu.projects": "Projects",  
     "menu.contact": "Contact",
     "menu.descri": "Red Teamer in training, simulating real attacks to discover flaws, anticipate threats and strengthen defenses with advanced intelligence.",
     "menu.Contact-me": "Contact-me",
@@ -109,7 +114,12 @@ const translations = {
     "menu.2025": "2025 Leonardo Costa. All rights reserved.",
     "menu.tro": "Modular Trojan",
     "menu.horse": "Modular Trojan with reverse shell, Windows registry persistence and AES-encrypted payload. Designed to simulate offensive techniques in controlled environments, with a focus on evasion and stealth execution.",
-    "menu.futuro": "Future projects"
+    "menu.futuro": "Future projects",
+    "menu.certi": "Certifications",
+    "menu.cer": "Certifications",
+    "menu.v": "View Certificate",
+    "menu.analista": "IBSEC - Cybersecurity Analyst",
+    "menu.gover": "(Governance)",
   }
 };
 

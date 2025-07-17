@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,14 +15,14 @@
             --text: #f8fafc;
             --dark-accent: #1e40af;
         }
-        
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: var(--primary);
             color: var(--text);
             scroll-behavior: smooth;
         }
-        
+
         .cyber-card {
             background: linear-gradient(145deg, var(--secondary), #0f172a);
             border: 1px solid rgba(59, 130, 246, 0.2);
@@ -29,21 +30,21 @@
             transition: all 0.3s ease;
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
         }
-        
+
         .cyber-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.3);
             border-color: var(--accent);
         }
-        
+
         .glow-text {
             text-shadow: 0 0 10px rgba(59, 130, 246, 0.7);
         }
-        
+
         .nav-link {
             position: relative;
         }
-        
+
         .nav-link::after {
             content: '';
             position: absolute;
@@ -54,25 +55,25 @@
             background-color: var(--accent);
             transition: width 0.3s ease;
         }
-        
+
         .nav-link:hover::after {
             width: 100%;
         }
-        
+
         .skill-bar {
             height: 8px;
             background-color: var(--secondary);
             border-radius: 4px;
             overflow: hidden;
         }
-        
+
         .skill-progress {
             height: 100%;
             background: linear-gradient(90deg, var(--accent), var(--dark-accent));
             border-radius: 4px;
             transition: width 1.5s ease;
         }
-        
+
         .hexagon {
             clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
             background-color: var(--secondary);
@@ -81,12 +82,12 @@
             align-items: center;
             transition: all 0.3s ease;
         }
-        
+
         .hexagon:hover {
             background-color: var(--accent);
             transform: scale(1.1);
         }
-        
+
         .timeline-item::before {
             content: '';
             position: absolute;
@@ -96,7 +97,7 @@
             height: 100%;
             background-color: var(--accent);
         }
-        
+
         .timeline-dot {
             position: absolute;
             left: -26px;
@@ -107,32 +108,44 @@
             background-color: var(--accent);
             box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
         }
-        
+
         .contact-input {
             background-color: var(--secondary);
             border: 1px solid rgba(59, 130, 246, 0.2);
             transition: all 0.3s ease;
         }
-        
+
         .contact-input:focus {
             border-color: var(--accent);
             box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
         }
-        
+
         .typewriter {
             overflow: hidden;
             white-space: nowrap;
             animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
         }
-        
+
         @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
+            from {
+                width: 0
+            }
+
+            to {
+                width: 100%
+            }
         }
-        
+
         @keyframes blink-caret {
-            from, to { border-color: transparent }
-            50% { border-color: var(--accent) }
+
+            from,
+            to {
+                border-color: transparent
+            }
+
+            50% {
+                border-color: var(--accent)
+            }
         }
 
         .cursor-glow {
@@ -158,6 +171,7 @@
         }
     </style>
 </head>
+
 <body class="min-h-screen">
     <div id="glow" class="cursor-glow"></div>
     <!-- Cabeçalho -->
@@ -169,14 +183,22 @@
                     <span class="text-xl font-bold">Leonardo<span class="text-accent">Sec</span></span>
                 </div>
                 <nav class="hidden md:flex space-x-8">
-                    <a href="#home" data-i18n="menu.home" class="nav-link text-sm uppercase font-medium hover:text-accent">Início</a>
-                    <a href="#about" data-i18n="menu.about" class="nav-link text-sm uppercase font-medium hover:text-accent">Sobre</a>
-                    <a href="#skills" data-i18n="menu.skills" class="nav-link text-sm uppercase font-medium hover:text-accent">Habilidades</a>
-                    <a href="#experience" data-i18n="menu.experience" class="nav-link text-sm uppercase font-medium hover:text-accent">Experiência</a>
-                    <a href="#projects" data-i18n="menu.projects"class="nav-link text-sm uppercase font-medium hover:text-accent">Projetos</a>
-                    <a href="#contact" data-i18n="menu.contact" class="nav-link text-sm uppercase font-medium hover:text-accent">Contato</a>
+                    <a href="#home" data-i18n="menu.home"
+                        class="nav-link text-sm uppercase font-medium hover:text-accent">Início</a>
+                    <a href="#about" data-i18n="menu.about"
+                        class="nav-link text-sm uppercase font-medium hover:text-accent">Sobre</a>
+                    <a href="#skills" data-i18n="menu.skills"
+                        class="nav-link text-sm uppercase font-medium hover:text-accent">Habilidades</a>
+                    <a href="#experience" data-i18n="menu.experience"
+                        class="nav-link text-sm uppercase font-medium hover:text-accent">Experiência</a>
+                    <a href="#projects" data-i18n="menu.projects"
+                        class="nav-link text-sm uppercase font-medium hover:text-accent">Projetos</a>
+                    <a href="#certificacoes" data-i18n="menu.certi"
+                        class="nav-link text-sm uppercase font-medium hover:text-accent">Certificações</a>
+                    <a href="#contact" data-i18n="menu.contact"
+                        class="nav-link text-sm uppercase font-medium hover:text-accent">Contato</a>
                 </nav>
-                 <select id="languageSwitcher" class="ml-4 bg-blue-900 text-white text-sm px-2 py-1 rounded">
+                <select id="languageSwitcher" class="ml-4 bg-blue-900 text-white text-sm px-2 py-1 rounded">
                     <option value="pt">🇧🇷 PT</option>
                     <option value="en">🇺🇸 EN</option>
                 </select>
@@ -184,20 +206,29 @@
                     <i class="fas fa-bars"></i>
                 </button>
                 <!-- Dentro do header, abaixo do botão de menu -->
-                <div id="mobile-menu" class="md:hidden hidden absolute top-full left-0 w-full bg-primary shadow-lg flex flex-col items-center py-4 space-y-4 z-50">
-                    <a href="#home" data-i18n="menu.1" class="text-sm uppercase font-medium hover:text-accent">Início</a>
-                    <a href="#about" data-i18n="menu.2" class="text-sm uppercase font-medium hover:text-accent">Sobre</a>
-                    <a href="#skills" data-i18n="menu.3" class="text-sm uppercase font-medium hover:text-accent">Habilidades</a>
-                    <a href="#experience" data-i18n="menu.4" class="text-sm uppercase font-medium hover:text-accent">Experiência</a>
-                    <a href="#projects" data-i18n="menu.5" class="text-sm uppercase font-medium hover:text-accent">Projetos</a>
-                    <a href="#contact" data-i18n="menu.6" class="text-sm uppercase font-medium hover:text-accent">Contato</a>
+                <div id="mobile-menu"
+                    class="md:hidden hidden absolute top-full left-0 w-full bg-primary shadow-lg flex flex-col items-center py-4 space-y-4 z-50">
+                    <a href="#home" data-i18n="menu.1"
+                        class="text-sm uppercase font-medium hover:text-accent">Início</a>
+                    <a href="#about" data-i18n="menu.2"
+                        class="text-sm uppercase font-medium hover:text-accent">Sobre</a>
+                    <a href="#skills" data-i18n="menu.3"
+                        class="text-sm uppercase font-medium hover:text-accent">Habilidades</a>
+                    <a href="#experience" data-i18n="menu.4"
+                        class="text-sm uppercase font-medium hover:text-accent">Experiência</a>
+                    <a href="#projects" data-i18n="menu.5"
+                        class="text-sm uppercase font-medium hover:text-accent">Projetos</a>
+                    <a href="#certificacoes" data-i18n="menu.certi"
+                        class="text-sm uppercase font-medium hover:text-accent">Certificações</a>
+                    <a href="#contact" data-i18n="menu.6"
+                        class="text-sm uppercase font-medium hover:text-accent">Contato</a>
                 </div>
             </div>
         </div>
     </header>
 
     <!-- Seção Hero -->
-    
+
     <section id="home" class="min-h-screen flex items-center pt-20">
         <div class="container mx-auto px-6 py-20">
             <div class="flex flex-col md:flex-row items-center">
@@ -205,26 +236,34 @@
                     <h1 class="text-4xl md:text-6xl font-bold mb-4 glow-text">
                         <span class="hacker-effect relative" data-text="Olá, eu sou [Seu Nome]">Leonardo Costa</span>
                     </h1>
-                    <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-accent typewriter">cybersecurity student</h2>
-                    <p data-i18n="menu.descri" class="text-lg mb-8 text-gray-300 max-w-lg">Red Teamer em formação, simulando ataques reais para descobrir falhas, antecipar ameaças e fortalecer defesas com inteligência ofensiva.
+                    <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-accent typewriter">cybersecurity student
+                    </h2>
+                    <p data-i18n="menu.descri" class="text-lg mb-8 text-gray-300 max-w-lg">Red Teamer em formação,
+                        simulando ataques reais para descobrir falhas, antecipar ameaças e fortalecer defesas com
+                        inteligência ofensiva.
                     </p>
                     <div class="flex space-x-4">
-                        <a href="#contact" data-i18n="menu.Contact-me" class="px-6 py-3 bg-accent hover:bg-blue-700 rounded-lg font-medium transition duration-300 transform hover:scale-105">
+                        <a href="#contact" data-i18n="menu.Contact-me"
+                            class="px-6 py-3 bg-accent hover:bg-blue-700 rounded-lg font-medium transition duration-300 transform hover:scale-105">
                             Contate-me
                         </a>
-                        <a href="#projects" data-i18n="menu.my" class="px-6 py-3 border border-accent text-accent hover:bg-blue-900 hover:bg-opacity-20 rounded-lg font-medium transition duration-300 transform hover:scale-105">
+                        <a href="#projects" data-i18n="menu.my"
+                            class="px-6 py-3 border border-accent text-accent hover:bg-blue-900 hover:bg-opacity-20 rounded-lg font-medium transition duration-300 transform hover:scale-105">
                             Meus Projetos
                         </a>
                     </div>
                 </div>
                 <div class="md:w-1/2 flex justify-center">
                     <div class="relative">
-                        <div class="w-64 h-64 md:w-80 md:h-80 bg-accent bg-opacity-20 rounded-full absolute -z-10 top-0 left-0 transform -translate-x-6 -translate-y-6"></div>
-                        <div class="w-64 h-64 md:w-80 md:h-80 bg-accent bg-opacity-10 rounded-full absolute -z-10 bottom-0 right-0 transform translate-x-6 translate-y-6"></div>
+                        <div
+                            class="w-64 h-64 md:w-80 md:h-80 bg-accent bg-opacity-20 rounded-full absolute -z-10 top-0 left-0 transform -translate-x-6 -translate-y-6">
+                        </div>
+                        <div
+                            class="w-64 h-64 md:w-80 md:h-80 bg-accent bg-opacity-10 rounded-full absolute -z-10 bottom-0 right-0 transform translate-x-6 translate-y-6">
+                        </div>
                         <div class="w-64 h-64 md:w-80 md:h-80 cyber-card overflow-hidden">
-                            <img src="chatimg.png" 
-                                 alt="Perfil de Cibersegurança" 
-                                 class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-300">
+                            <img src="chatimg.png" alt="Perfil de Cibersegurança"
+                                class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-300">
                         </div>
                     </div>
                 </div>
@@ -236,49 +275,55 @@
     <section id="about" class="py-20 bg-secondary">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 data-i18n="menu.meme" class="text-3xl md:text-4xl font-bold mb-4">Sobre <span class="text-accent">Mim</span></h2>
+                <h2 data-i18n="menu.meme" class="text-3xl md:text-4xl font-bold mb-4">Sobre <span
+                        class="text-accent">Mim</span></h2>
                 <div class="w-20 h-1 bg-accent mx-auto"></div>
             </div>
-            
+
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/3 mb-10 md:mb-0 flex justify-center">
                     <div class="w-64 h-64 cyber-card overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
-                             alt="Sobre Mim" 
-                             class="w-full h-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                            alt="Sobre Mim" class="w-full h-full object-cover">
                     </div>
                 </div>
                 <div class="md:w-2/3 md:pl-12">
                     <h3 class="text-2xl font-semibold mb-6">Aspiring Cybersecurity Analyst</h3>
-                    <p data-i18n="menu.mydescri" class="mb-6 text-gray-300">Tenho me dedicado intensamente à área de Red Team no último ano, desenvolvendo habilidades que vão desde testes de penetração até a elaboração e aplicação de políticas de segurança robustas.
+                    <p data-i18n="menu.mydescri" class="mb-6 text-gray-300">Tenho me dedicado intensamente à área de Red
+                        Team no último ano, desenvolvendo habilidades que vão desde testes de penetração até a
+                        elaboração e aplicação de políticas de segurança robustas.
                     </p>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                         <div class="flex items-start">
                             <i class="fas fa-user-shield text-accent text-xl mt-1 mr-4"></i>
                             <div>
                                 <h4 data-i18n="menu.ofen" class="font-semibold mb-2">Segurança Ofensiva</h4>
-                                <p data-i18n="menu.teste" class="text-gray-400 text-sm">Testes de penetração, análise de vulnerabilidades e red teaming.</p>
+                                <p data-i18n="menu.teste" class="text-gray-400 text-sm">Testes de penetração, análise de
+                                    vulnerabilidades e red teaming.</p>
                             </div>
                         </div>
                         <div class="flex items-start">
                             <i class="fas fa-lock text-accent text-xl mt-1 mr-4"></i>
                             <div>
                                 <h4 data-i18n="menu.def" class="font-semibold mb-2">Segurança Defensiva</h4>
-                                <p data-i18n="menu.moni" class="text-gray-400 text-sm">Monitoramento de segurança, resposta a incidentes e blue teaming.</p>
+                                <p data-i18n="menu.moni" class="text-gray-400 text-sm">Monitoramento de segurança,
+                                    resposta a incidentes e blue teaming.</p>
                             </div>
                         </div>
                         <div class="flex items-start">
                             <i class="fas fa-code text-accent text-xl mt-1 mr-4"></i>
                             <div>
                                 <h4 data-i18n="menu.apli" class="font-semibold mb-2">Segurança em Aplicações</h4>
-                                <p data-i18n="menu.ana" class="text-gray-400 text-sm">Análise de código seguro e testes de segurança em aplicações web.</p>
+                                <p data-i18n="menu.ana" class="text-gray-400 text-sm">Análise de código seguro e testes
+                                    de segurança em aplicações web.</p>
                             </div>
                         </div>
                         <div class="flex items-start">
                             <i class="fas fa-cloud text-accent text-xl mt-1 mr-4"></i>
                             <div>
                                 <h4 data-i18n="menu.nu" class="font-semibold mb-2">Segurança em Nuvem</h4>
-                                <p data-i18n="menu.prote" class="text-gray-400 text-sm">Proteção de ambientes cloud e arquiteturas seguras.</p>
+                                <p data-i18n="menu.prote" class="text-gray-400 text-sm">Proteção de ambientes cloud e
+                                    arquiteturas seguras.</p>
                             </div>
                         </div>
                     </div>
@@ -287,10 +332,10 @@
                             <i class="fas fa-certificate text-accent mr-2"></i>
                             <span data-i18n="menu.ej" class="text-sm">Em busca da eJPT</span>
                         </div>
-                        </div>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </section>
 
@@ -298,15 +343,16 @@
     <section id="skills" class="py-20">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 data-i18n="menu.min" class="text-3xl md:text-4xl font-bold mb-4">Minhas <span data-i18n="menu.sk" class="text-accent">Habilidades</span></h2>
+                <h2 data-i18n="menu.min" class="text-3xl md:text-4xl font-bold mb-4">Minhas <span data-i18n="menu.sk"
+                        class="text-accent">Habilidades</span></h2>
                 <div class="w-20 h-1 bg-accent mx-auto"></div>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <div>
                     <h3 class="text-xl font-semibold mb-6 flex items-center">
                         <i class="fas fa-laptop-code text-accent mr-3"></i>
-                          <span data-i18n="menu.tec">Habilidades Técnicas</span>
+                        <span data-i18n="menu.tec">Habilidades Técnicas</span>
                     </h3>
                     <div class="space-y-6">
                         <div>
@@ -338,7 +384,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div>
                     <h3 class="text-xl font-semibold mb-6 flex items-center">
                         <i class="fas fa-tools text-accent mr-3"></i>
@@ -365,7 +411,7 @@
                         </div>
                     </div>
                     <div class="mt-6">
-                        <h4  data-i18n="menu.out" class="font-semibold mb-3">Outras ferramentas:</h4>
+                        <h4 data-i18n="menu.out" class="font-semibold mb-3">Outras ferramentas:</h4>
                         <div class="flex flex-wrap gap-2">
                             <span class="px-3 py-1 bg-secondary rounded-full text-sm">Metasploit</span>
                             <span class="px-3 py-1 bg-secondary rounded-full text-sm">Burp Suite</span>
@@ -384,10 +430,11 @@
     <section id="experience" class="py-20 bg-secondary">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 data-i18n="menu.minha" class="text-3xl md:text-4xl font-bold mb-4">Minha <span class="text-accent">Jornada</span></h2>
+                <h2 data-i18n="menu.minha" class="text-3xl md:text-4xl font-bold mb-4">Minha <span
+                        class="text-accent">Jornada</span></h2>
                 <div class="w-20 h-1 bg-accent mx-auto"></div>
             </div>
-            
+
             <div class="relative max-w-3xl mx-auto">
                 <div class="space-y-8">
                     <div class="timeline-item relative pl-8">
@@ -395,26 +442,32 @@
                         <div class="cyber-card p-6">
                             <div class="flex justify-between items-start mb-2">
                                 <h3 class="text-xl font-semibold">Pentester Jr. </h3>
-                                <span data-i18n="menu.rem" class="px-3 py-1 bg-accent bg-opacity-20 text-accent rounded-full text-sm">2024 - Remoto</span>
+                                <span data-i18n="menu.rem"
+                                    class="px-3 py-1 bg-accent bg-opacity-20 text-accent rounded-full text-sm">2024 -
+                                    Remoto</span>
                             </div>
                             <h4 class="text-accent mb-3">Awari School</h4>
                             <p data-i18n="menu.aw" class="text-gray-300">
-                                Execução de testes em servidores e aplicações<br>Análise de vulnerabilidades e elaboração de relatórios técnicos
-Configuração de firewalls (Check Point, Cisco), VPNs, IPS, e sistemas de controle de acesso<br>Participação ativa em projetos de segurança da informação
+                                Execução de testes em servidores e aplicações<br>Análise de vulnerabilidades e
+                                elaboração de relatórios técnicos
+                                Configuração de firewalls (Check Point, Cisco), VPNs, IPS, e sistemas de controle de
+                                acesso<br>Participação ativa em projetos de segurança da informação
                             </p>
                         </div>
                     </div>
-                    
+
                     <div class="timeline-item relative pl-8">
                         <div class="timeline-dot"></div>
                         <div class="cyber-card p-6">
                             <div class="flex justify-between items-start mb-2">
                                 <h3 data-i18n="menu.est" class="text-xl font-semibold">Estagiário - T.I</h3>
-                                <span class="px-3 py-1 bg-accent bg-opacity-20 text-accent rounded-full text-sm">2024 - 2025</span>
+                                <span class="px-3 py-1 bg-accent bg-opacity-20 text-accent rounded-full text-sm">2024 -
+                                    2025</span>
                             </div>
                             <h4 class="text-accent mb-3">Vellon Telecom</h4>
-                            <p  data-i18n="menu.sup" class="text-gray-300">
-                                Suporte técnico e administração de redes<br>Configuração de equipamentos e serviços<br>Participação na resposta a incidentes de segurança internos
+                            <p data-i18n="menu.sup" class="text-gray-300">
+                                Suporte técnico e administração de redes<br>Configuração de equipamentos e
+                                serviços<br>Participação na resposta a incidentes de segurança internos
                             </p>
                         </div>
                     </div>
@@ -427,28 +480,31 @@ Configuração de firewalls (Check Point, Cisco), VPNs, IPS, e sistemas de contr
     <section id="projects" class="py-20">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 data-i18n="menu.mp" class="text-3xl md:text-4xl font-bold mb-4">Meus <span class="text-accent">Projetos</span></h2>
+                <h2 data-i18n="menu.mp" class="text-3xl md:text-4xl font-bold mb-4">Meus <span
+                        class="text-accent">Projetos</span></h2>
                 <div class="w-20 h-1 bg-accent mx-auto"></div>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="cyber-card overflow-hidden">
                     <div class="h-48 overflow-hidden">
-                        <img src="https://imgs.search.brave.com/bu-Tlroe7SWN_G3y0HFJjJLgCyB5fmKMWD_LyALJU3k/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/YmxlZXBzdGF0aWMu/Y29tL2NvbnRlbnQv/aGwtaW1hZ2VzLzIw/MjMvMTIvMDcvYmFj/ay5qcGc" 
-                             alt="Projeto 1" 
-                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <img src="https://imgs.search.brave.com/bu-Tlroe7SWN_G3y0HFJjJLgCyB5fmKMWD_LyALJU3k/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/YmxlZXBzdGF0aWMu/Y29tL2NvbnRlbnQv/aGwtaW1hZ2VzLzIw/MjMvMTIvMDcvYmFj/ay5qcGc"
+                            alt="Projeto 1"
+                            class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-3">
                             <div class="flex-1">
-                                <h3 data-i18n="menu.mass" class="text-xl font-semibold leading-tight">Verificação massiva de Vulnerabilidades</h3>
+                                <h3 data-i18n="menu.mass" class="text-xl font-semibold leading-tight">Verificação
+                                    massiva de Vulnerabilidades</h3>
+                            </div>
+
+                            <a href="https://github.com/leonardosec/WP3xploit"
+                                class="flex items-center gap-2 text-accent hover:text-blue-400 whitespace-nowrap">
+                                <i class="fab fa-github"></i>
+                                <span>Github</span>
+                            </a>
                         </div>
-  
-                        <a href="https://github.com/leonardosec/WP3xploit" class="flex items-center gap-2 text-accent hover:text-blue-400 whitespace-nowrap">
-                            <i class="fab fa-github"></i>
-                            <span>Github</span>
-                        </a>
-                    </div>
                         <p class="text-gray-300 mb-4">
                             Advanced Vulnerability Detection<br>
                             Deep File Scanning and Backdoor Scanner<br>
@@ -461,7 +517,7 @@ Configuração de firewalls (Check Point, Cisco), VPNs, IPS, e sistemas de contr
 
                         </p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-2 py-1 bg-secondary rounded-full text-xs">Python</span> 
+                            <span class="px-2 py-1 bg-secondary rounded-full text-xs">Python</span>
                             <span class="px-2 py-1 bg-secondary rounded-full text-xs">Nmap</span>
                         </div>
                     </div>
@@ -469,37 +525,40 @@ Configuração de firewalls (Check Point, Cisco), VPNs, IPS, e sistemas de contr
 
                 <div class="cyber-card overflow-hidden">
                     <div class="h-48 overflow-hidden">
-                        <img src="https://www.notion.so/images/page-cover/webb4.jpg" 
-                             alt="Projeto 1" 
-                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <img src="https://www.notion.so/images/page-cover/webb4.jpg" alt="Projeto 1"
+                            class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-3">
                             <h3 class="text-xl font-semibold">RoadMap</h3>
                             <div class="flex space-x-2">
-                                <a href="https://elastic-toothbrush-275.notion.site/Protocolo-Russo-Summary-219852fff4a6801fa3cef7cb972b88ca?pvs=74" class="text-accent hover:text-blue-400 flex items-center space-x-2">
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png" alt="Notion" class="w-5 h-5">
+                                <a href="https://elastic-toothbrush-275.notion.site/Protocolo-Russo-Summary-219852fff4a6801fa3cef7cb972b88ca?pvs=74"
+                                    class="text-accent hover:text-blue-400 flex items-center space-x-2">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png"
+                                        alt="Notion" class="w-5 h-5">
                                     <span>Notion</span>
                                     <!--<i class="fab fa-github"></i>-->
                                 </a>
                             </div>
                         </div>
                         <p data-i18n="menu.road" class="text-gray-300 mb-4">
-                            Um roteiro estruturado e brutal que espelha como hackers russos de elite desenvolvem suas habilidades. Foca na construção sólida desde a base matemática até o domínio avançado em ofensiva, engenharia reversa, operações clandestinas e guerra cibernética.
+                            Um roteiro estruturado e brutal que espelha como hackers russos de elite desenvolvem suas
+                            habilidades. Foca na construção sólida desde a base matemática até o domínio avançado em
+                            ofensiva, engenharia reversa, operações clandestinas e guerra cibernética.
 
                         </p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-2 py-1 bg-secondary rounded-full text-xs">Notion</span> 
+                            <span class="px-2 py-1 bg-secondary rounded-full text-xs">Notion</span>
                             <!--<span class="px-2 py-1 bg-secondary rounded-full text-xs">Nmap</span>-->
                         </div>
                     </div>
-                </div>  
-                
+                </div>
+
                 <div class="cyber-card overflow-hidden">
                     <div class="h-48 overflow-hidden">
-                        <img src="https://as1.ftcdn.net/jpg/07/54/61/22/1000_F_754612244_RVaeRV9To3Ozbe55E98vcblCHPhqaFi5.jpg" 
-                             alt="Projeto 2" 
-                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <img src="https://as1.ftcdn.net/jpg/07/54/61/22/1000_F_754612244_RVaeRV9To3Ozbe55E98vcblCHPhqaFi5.jpg"
+                            alt="Projeto 2"
+                            class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-3">
@@ -512,10 +571,13 @@ Configuração de firewalls (Check Point, Cisco), VPNs, IPS, e sistemas de contr
                             </div>
                         </div>
                         <p data-i18n="menu.horse" class="text-gray-300 mb-4">
-                            Trojan modular com shell reverso, persistência via registro do Windows e payload criptografado com AES. Criado para simular técnicas ofensivas em ambientes controlados, com foco em evasão e execução furtiva.
+                            Trojan modular com shell reverso, persistência via registro do Windows e payload
+                            criptografado com AES. Criado para simular técnicas ofensivas em ambientes controlados, com
+                            foco em evasão e execução furtiva.
                         </p>
                         <div class="flex flex-wrap gap-2">
-                            <span data-i18n="menu.breve" class="px-2 py-1 bg-secondary rounded-full text-xs">Python</span>
+                            <span data-i18n="menu.breve"
+                                class="px-2 py-1 bg-secondary rounded-full text-xs">Python</span>
                             <span class="px-2 py-1 bg-secondary rounded-full text-xs">AES</span>
                         </div>
                     </div>
@@ -523,9 +585,9 @@ Configuração de firewalls (Check Point, Cisco), VPNs, IPS, e sistemas de contr
 
                 <div class="cyber-card overflow-hidden">
                     <div class="h-48 overflow-hidden">
-                        <img src="https://imgs.search.brave.com/0r3Vm0Xzku5xm2bjA_wXbNU_ATkGvq03U93Zc62MDPI/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/Z292LmJyL2Fncmlj/dWx0dXJhL3B0LWJy/L2Fzc3VudG9zL3Jp/c2Nvcy1zZWd1cm8v/aW1hZ2Vucy9lbV9j/b25zdHJ1YW8ucG5n/L0BAaW1hZ2VzL2lt/YWdlLnBuZw" 
-                             alt="Projeto 2" 
-                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <img src="https://imgs.search.brave.com/0r3Vm0Xzku5xm2bjA_wXbNU_ATkGvq03U93Zc62MDPI/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/Z292LmJyL2Fncmlj/dWx0dXJhL3B0LWJy/L2Fzc3VudG9zL3Jp/c2Nvcy1zZWd1cm8v/aW1hZ2Vucy9lbV9j/b25zdHJ1YW8ucG5n/L0BAaW1hZ2VzL2lt/YWdlLnBuZw"
+                            alt="Projeto 2"
+                            class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-3">
@@ -537,7 +599,9 @@ Configuração de firewalls (Check Point, Cisco), VPNs, IPS, e sistemas de contr
                             </div>
                         </div>
                         <p data-i18n="menu.bru" class="text-gray-300 mb-4">
-                            Brute force de login com tratamento de resposta - Ferramenta completa de Recon - C2 com shell reversa criptografada - Exploit local com shell injectado - Loader com evasão AV/EDR em C puro
+                            Brute force de login com tratamento de resposta - Ferramenta completa de Recon - C2 com
+                            shell reversa criptografada - Exploit local com shell injectado - Loader com evasão AV/EDR
+                            em C puro
                         </p>
                         <div class="flex flex-wrap gap-2">
                             <!--<span data-i18n="menu.breve" class="px-2 py-1 bg-secondary rounded-full text-xs">Python</span>
@@ -545,123 +609,223 @@ Configuração de firewalls (Check Point, Cisco), VPNs, IPS, e sistemas de contr
                         </div>
                     </div>
                 </div>
-
     </section>
-<!-- Seção Contato + Redes Sociais -->
-<section id="contact" class="py-20 bg-primary">
-    <div class="container mx-auto px-6">
-        <div class="text-center mb-16">
-            <h2 data-i18n="menu.entre" class="text-3xl md:text-4xl font-bold mb-4">Entre em <span class="text-accent">Contato</span></h2>
-            <div class="w-20 h-1 bg-accent mx-auto"></div>
+    <!-- CERTIFICAÇÕES -->
+    <section id="certificacoes" class="pt-6 md:pt-8 pb-16 md:pb-20 bg-zinc-950">
+        <div class="container mx-auto px-6 text-center">
+            <h2 data-i18n="menu.cer" class="text-3xl font-bold mb-14 mt-0 text-accent">Certificações</h2>
+            <!--<div class="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center"> -->
+
+            <!--QUANDO ADICIONAR OUTRAS CERTIFICAÇÕES DESCOMENTE A DIV A CIMA E COMENTE A DIV DE BAIXO.
+            A DIV DE BAIXO DEIXA TUDO CENTRALIZADO IDEAL PARA UM SÓ CARD-->
+
+            <div class="flex flex-wrap justify-center gap-8 md:gap-12">
+                <!-- Certificado 1 -->
+                <div class="flex flex-col items-center">
+                    <div class="relative group cursor-pointer">
+                        <img src="PT-IC-GRC-960.png" alt="Certificado"
+                            class="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-accent transition duration-300 group-hover:opacity-70" />
+                        <div
+                            class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 bg-black bg-opacity-75 rounded-lg">
+                            <button onclick="document.getElementById('cert-modal-1').classList.remove('hidden')"
+                                data-i18n="menu.v" class="text-accent border border-accent px-4 py-2 rounded">Ver Certificado</button>
+                        </div>
+                    </div>
+                    <p data-i18n="menu.analista" class="mt-2 text-accent font-semibold text-xs md:text-sm text-center w-64 md:w-72">IBSEC -
+                        Analista da Cibersegurança</p>
+                        <p data-i18n="menu.gover" class="mt-2 text-accent font-semibold text-xs md:text-sm text-center w-64 md:w-72">(Governança)</p>
+                </div>
+                <!-- Certificado 2 -->
+                <div class="flex flex-col items-center">
+                    <div class="relative group cursor-pointer">
+                        <img src="SELO-PENTEST.png" alt="Certificado"
+                            class="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-accent transition duration-300 group-hover:opacity-70" />
+                        <div
+                            class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 bg-black bg-opacity-75 rounded-lg">
+                            <button onclick="document.getElementById('cert-modal-2').classList.remove('hidden')"
+                                data-i18n="menu.v" class="text-accent border border-accent px-4 py-2 rounded">Ver Certificado</button>
+                        </div>
+                    </div>
+                    <p class="mt-2 text-accent font-semibold text-xs md:text-sm text-center w-64 md:w-72">IBSEC -
+                        Pentester</p>
+                </div>
+
+                <!-- Certificado 3
+                <div class="flex flex-col items-center">
+                    <div class="relative group cursor-pointer">
+                        <img src="SELO-PENTEST.png" alt="Certificado" class="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-accent transition duration-300 group-hover:opacity-70"/>
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 bg-black bg-opacity-75 rounded-lg">
+                            <button onclick="document.getElementById('cert-modal-3').classList.remove('hidden')" class="text-accent border border-accent px-4 py-2 rounded">Ver Certificado</button>
+                        </div>
+                    </div>
+                    <p class="mt-2 text-accent font-semibold text-xs md:text-sm text-center w-64 md:w-72">IBSEC - Hacker Ético</p>
+                </div> -->
+            </div>
+
+            <!-- Modais -->
+            <div id="cert-modal-1"
+                class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden">
+                <div class="bg-zinc-900 p-6 rounded-lg relative max-w-4xl w-full">
+                    <button onclick="document.getElementById('cert-modal-1').classList.add('hidden')"
+                        class="absolute -top-6 -right-6 text-white text-3xl md:text-5xl font-bold hover:text-accent transition">&times;</button>
+                    <img src="ANALISTA-IBSEC.jpg" alt="Certificado 1 Completo" class="w-full rounded" />
+                </div>
+            </div>
+
+            <div id="cert-modal-2"
+                class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden">
+                <div class="bg-zinc-900 p-6 rounded-lg relative max-w-4xl w-full">
+                    <button onclick="document.getElementById('cert-modal-2').classList.add('hidden')"
+                        class="absolute -top-6 -right-6 text-white text-3xl md:text-5xl font-bold hover:text-accent transition">&times;</button>
+                    <img src="PENTEST.jpg" alt="Certificado 2 Completo" class="w-full rounded" />
+                </div>
+            </div>
+
+            <div id="cert-modal-3"
+                class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden">
+                <div class="bg-zinc-900 p-6 rounded-lg relative max-w-4xl w-full">
+                    <button onclick="document.getElementById('cert-modal-3').classList.add('hidden')"
+                        class="absolute -top-6 -right-6 text-white text-3xl md:text-5xl font-bold hover:text-accent transition">&times;</button>
+                    <img src="#" alt="Certificado 3 Completo" class="w-full rounded" />
+                </div>
+            </div>
+        </div>
         </div>
 
-        <!-- Conteúdo em duas colunas -->
-        <div class="flex flex-col md:flex-row gap-12 max-w-6xl mx-auto">
-            <!-- Formulário -->
-            <div class="md:w-1/2 w-full">
-                <form action="https://formspree.io/f/meokwzeq " method="POST" class="space-y-6">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Modal do Certificado -->
+        <div id="cert-modal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden">
+            <div class="bg-zinc-900 p-6 rounded-lg relative max-w-4xl w-full">
+                <button onclick="document.getElementById('cert-modal').classList.add('hidden')"
+                    class="absolute top-3 right-3 text-white text-xl">&times;</button>
+                <img src="#" alt="Certificado IBSEC Completo" class="w-full rounded" />
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+    <!-- Seção Contato + Redes Sociais -->
+    <section id="contact" class="py-20 bg-primary">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 data-i18n="menu.entre" class="text-3xl md:text-4xl font-bold mb-4">Entre em <span
+                        class="text-accent">Contato</span></h2>
+                <div class="w-20 h-1 bg-accent mx-auto"></div>
+            </div>
+
+            <!-- Conteúdo em duas colunas -->
+            <div class="flex flex-col md:flex-row gap-12 max-w-6xl mx-auto">
+                <!-- Formulário -->
+                <div class="md:w-1/2 w-full">
+                    <form action="https://formspree.io/f/meokwzeq " method="POST" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" data-i18n="menu.na"
+                                    class="block text-sm font-medium mb-2">Nome</label>
+                                <input type="text" id="name" name="name" required
+                                    class="contact-input w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium mb-2">E-mail</label>
+                                <input type="email" id="email" name="email" required
+                                    class="contact-input w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent">
+                            </div>
+                        </div>
                         <div>
-                            <label for="name" data-i18n="menu.na" class="block text-sm font-medium mb-2">Nome</label>
-                            <input type="text" id="name" name="name" required
+                            <label for="subject" data-i18n="menu.su"
+                                class="block text-sm font-medium mb-2">Assunto</label>
+                            <input type="text" id="subject" name="subject" required
                                 class="contact-input w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent">
                         </div>
                         <div>
-                            <label for="email" class="block text-sm font-medium mb-2">E-mail</label>
-                            <input type="email" id="email" name="email" required
-                                class="contact-input w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent">
+                            <label for="message" data-i18n="menu.messa"
+                                class="block text-sm font-medium mb-2">Mensagem</label>
+                            <textarea id="message" name="message" rows="5" required
+                                class="contact-input w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent"></textarea>
                         </div>
-                    </div>
-                    <div>
-                        <label for="subject" data-i18n="menu.su" class="block text-sm font-medium mb-2">Assunto</label>
-                        <input type="text" id="subject" name="subject" required
-                            class="contact-input w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent">
-                    </div>
-                    <div>
-                        <label for="message" data-i18n="menu.messa" class="block text-sm font-medium mb-2">Mensagem</label>
-                        <textarea id="message" name="message" rows="5" required
-                            class="contact-input w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent"></textarea>
-                    </div>
-                    <div class="flex justify-center">
-                        <button type="submit"
-                                data-i18n="menu.enviar"
+                        <div class="flex justify-center">
+                            <button type="submit" data-i18n="menu.enviar"
                                 class="px-6 py-3 bg-accent hover:bg-blue-700 rounded-lg font-medium transition duration-300 transform hover:scale-105">
-                            Enviar Mensagem
-                        </button>
-                    </div>
-                </form>
-            </div>
-
-            <!-- Redes Sociais -->
-            <div class="md:w-1/2 w-full flex flex-col items-center justify-start">
-                <h2 data-i18n="menu.redes" class="text-2xl md:text-3xl font-bold mb-6">Minhas <span class="text-accent">Redes Sociais</span></h2>
-                <p data-i18n="menu.siga" class="text-gray-300 mb-8 text-center max-w-xs">Me siga nas redes e acompanhe meu trabalho e estudos em cibersegurança.</p>
-
-                <div class="flex flex-wrap justify-center gap-6 mb-8">
-                    <!-- LinkedIn -->
-                    <a href="https://www.linkedin.com/in/leonardo-kauan-128330269/ " target="_blank" rel="noopener noreferrer"
-                       class="text-accent hover:text-blue-400 transition duration-300 transform hover:scale-110">
-                        <i class="fab fa-linkedin-in text-3xl"></i>
-                    </a>
-
-                    <!-- GitHub -->
-                    <a href="https://github.com/leonardosec" target="_blank" rel="noopener noreferrer"
-                       class="text-accent hover:text-gray-300 transition duration-300 transform hover:scale-110">
-                        <i class="fab fa-github text-3xl"></i>
-                    </a>
-
-                    <!-- WhatsApp -->
-                    <a href="https://wa.me/91984075668 " target="_blank" rel="noopener noreferrer"
-                       class="text-accent hover:text-green-500 transition duration-300 transform hover:scale-110">
-                        <i class="fab fa-whatsapp text-3xl"></i>
-                    </a>
-
-                    <!-- Instagram -->
-                    <a href="https://www.instagram.com/leonardosec_/" target="_blank" rel="noopener noreferrer"
-                       class="text-accent hover:text-pink-500 transition duration-300 transform hover:scale-110">
-                        <i class="fab fa-instagram text-3xl"></i>
-                    </a>
+                                Enviar Mensagem
+                            </button>
+                        </div>
+                    </form>
                 </div>
 
-                <div data-i18n="menu.2025" class="mt-auto text-sm text-gray-500 text-center">
-                    &copy; 2025 Leonardo Costa. Todos os direitos reservados.
+                <!-- Redes Sociais -->
+                <div class="md:w-1/2 w-full flex flex-col items-center justify-start">
+                    <h2 data-i18n="menu.redes" class="text-2xl md:text-3xl font-bold mb-6">Minhas <span
+                            class="text-accent">Redes Sociais</span></h2>
+                    <p data-i18n="menu.siga" class="text-gray-300 mb-8 text-center max-w-xs">Me siga nas redes e
+                        acompanhe meu trabalho e estudos em cibersegurança.</p>
+
+                    <div class="flex flex-wrap justify-center gap-6 mb-8">
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/in/leonardo-kauan-128330269/ " target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-accent hover:text-blue-400 transition duration-300 transform hover:scale-110">
+                            <i class="fab fa-linkedin-in text-3xl"></i>
+                        </a>
+
+                        <!-- GitHub -->
+                        <a href="https://github.com/leonardosec" target="_blank" rel="noopener noreferrer"
+                            class="text-accent hover:text-gray-300 transition duration-300 transform hover:scale-110">
+                            <i class="fab fa-github text-3xl"></i>
+                        </a>
+
+                        <!-- WhatsApp -->
+                        <a href="https://wa.me/91984075668 " target="_blank" rel="noopener noreferrer"
+                            class="text-accent hover:text-green-500 transition duration-300 transform hover:scale-110">
+                            <i class="fab fa-whatsapp text-3xl"></i>
+                        </a>
+
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/leonardosec_/" target="_blank" rel="noopener noreferrer"
+                            class="text-accent hover:text-pink-500 transition duration-300 transform hover:scale-110">
+                            <i class="fab fa-instagram text-3xl"></i>
+                        </a>
+                    </div>
+
+                    <div data-i18n="menu.2025" class="mt-auto text-sm text-gray-500 text-center">
+                        &copy; 2025 Leonardo Costa. Todos os direitos reservados.
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Botão Flutuante WhatsApp -->
-<a href="https://wa.me/91984075668 " target="_blank" rel="noopener noreferrer"
-   class="fixed bottom-6 right-6 z-50 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition duration-300 transform hover:scale-110">
-    <i class="fab fa-whatsapp text-2xl"></i>
-</a>
-<script src="teste.js"></script>
-<script>
-  const glow = document.getElementById('glow');
-  document.addEventListener('mousemove', (e) => {
-    glow.style.left = `${e.clientX}px`;
-    glow.style.top = `${e.clientY}px`;
-  });
-</script>
+    <!-- Botão Flutuante WhatsApp -->
+    <a href="https://wa.me/91984075668 " target="_blank" rel="noopener noreferrer"
+        class="fixed bottom-6 right-6 z-50 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition duration-300 transform hover:scale-110">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+    <script src="teste.js"></script>
+    <script>
+        const glow = document.getElementById('glow');
+        document.addEventListener('mousemove', (e) => {
+            glow.style.left = `${e.clientX}px`;
+            glow.style.top = `${e.clientY}px`;
+        });
+    </script>
 
-<script>
-  // Toggle mobile menu
-  const menuButton = document.querySelector('button[aria-label], button .fa-bars'); // Botão do menu
-  const mobileMenu = document.getElementById('mobile-menu');
+    <script>
+        // Toggle mobile menu
+        const menuButton = document.querySelector('button[aria-label], button .fa-bars'); // Botão do menu
+        const mobileMenu = document.getElementById('mobile-menu');
 
-  if (menuButton && mobileMenu) {
-    menuButton.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
+        if (menuButton && mobileMenu) {
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
 
-    // Opcional: fechar o menu ao clicar em um link
-    mobileMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-      });
-    });
-  }
-</script>
-</body>          
+            // Opcional: fechar o menu ao clicar em um link
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+    </script>
+</body>
+
 </html>
