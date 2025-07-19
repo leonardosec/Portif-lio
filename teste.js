@@ -59,6 +59,7 @@ const translations = {
     "menu.v": "Ver Certificado",
     "menu.analista": "IBSEC - Analista da Cibersegurança",
     "menu.gover": "(Governança)",
+    "menu.hacker": "IBSEC - Hacker Ético",
   },
   en: {
     "menu.home": "Home",
@@ -120,6 +121,7 @@ const translations = {
     "menu.v": "View Certificate",
     "menu.analista": "IBSEC - Cybersecurity Analyst",
     "menu.gover": "(Governance)",
+    "menu.hacker": "IBSEC - Ethical Hacker",
   }
 };
 
