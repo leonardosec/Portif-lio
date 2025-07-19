@@ -60,6 +60,7 @@ const translations = {
     "menu.analista": "IBSEC - Analista da Cibersegurança",
     "menu.gover": "(Governança)",
     "menu.hacker": "IBSEC - Hacker Ético",
+    "menu.aspirante": "Aspirante a Pentester",
   },
   en: {
     "menu.home": "Home",
@@ -122,6 +123,7 @@ const translations = {
     "menu.analista": "IBSEC - Cybersecurity Analyst",
     "menu.gover": "(Governance)",
     "menu.hacker": "IBSEC - Ethical Hacker",
+    "menu.aspirante": "Aspiring Pentester",
   }
 };
 
