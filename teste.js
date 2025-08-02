@@ -60,9 +60,11 @@ const translations = {
     "menu.analista": "IBSEC - Analista da Cibersegurança",
     "menu.gover": "(Governança)",
     "menu.hacker": "IBSEC - Hacker Ético",
-    "menu.aspirante": "Aspirante a Pentester",
+    "menu.aspirante": "Aspirante a Pentester Pleno",
+    "menu.junior": "Pentester Junior",
   },
   en: {
+    "menu.junior": "Junior Pentester",
     "menu.home": "Home",
     "menu.about": "About",
     "menu.skills": "Skills",
@@ -123,7 +125,7 @@ const translations = {
     "menu.analista": "IBSEC - Cybersecurity Analyst",
     "menu.gover": "(Governance)",
     "menu.hacker": "IBSEC - Ethical Hacker",
-    "menu.aspirante": "Aspiring Pentester",
+    "menu.aspirante": "Aspiring Full Pentester",
   }
 };
 
